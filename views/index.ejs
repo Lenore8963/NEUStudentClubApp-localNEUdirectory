@@ -4,15 +4,17 @@
     <title>Main Page</title>
   </head>
   <body>
-    <% if (!isAuthenticated) { %>
+    <% if (!isAuthenticated) { %> 
     <h1>Welcome!</h1>
     <a href="/login">Sign in with Microsoft</a>
     <% } else { %>
-    <h1>User Profile</h1>
-    <p>Username: <%= user.preferred_username %></p>
-    <p>Display Name: <%= user.name %></p>
-    <p>Email: <%= user.upn || user.email %></p>
-    <a href="/signout">Sign Out</a>
+    <h1>User Profile</h1> 
+    <p>Username: <%= user.name %></p>
+    <p>Email: <%= user.preferred_username %></p>
+    <p>Roles: <%= user.roles %></p>
+    <a href="/signout">Sign Out</a> 
     <% } %>
   </body>
 </html>
+
+
